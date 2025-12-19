@@ -113,7 +113,7 @@ export async function POST(req: Request) {
             return aiRow;
         });
 
-        return NextResponse.json({ id: result.id, summary: summaryText });
+        return NextResponse.json({ id: result.id, summary: summaryText }, { headers: {'Access-Control-Allow-Origin': '*'}});
     } catch (err) {
         console.error("Summarizer error:", err);
         return NextResponse.json({ error: "Failed to summarize" }, { status: 500 });

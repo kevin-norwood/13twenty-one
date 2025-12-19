@@ -76,7 +76,7 @@ export async function GET(
     .limit(1);
 
   if (rows.length === 0) {
-    return NextResponse.json({ data: null });
+    return NextResponse.json({ data: null }, { headers: {'Access-Control-Allow-Origin': '*'}});
   }
 
   return NextResponse.json({
@@ -87,5 +87,5 @@ export async function GET(
       status: rows[0].status,
       updatedAt: rows[0].updatedAt,
     },
-  });
+  }, { headers: {'Access-Control-Allow-Origin': '*'}});
 }
