@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(npm test:*)",
+      "Bash(npm install:*)",
+      "Bash(tree:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)"
+    ]
+  }
+}

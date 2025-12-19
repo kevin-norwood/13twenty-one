@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "2e8cc02e-cbe0-48a7-8ed2-7ff93ae38300",
+		"name": "AI Summarizer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22810736"
+	},
+	"item": [
+		{
+			"name": "Summarizer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"context\": \"admin_notes\",\n  \"payload\": {\n    \"recruitId\": 1,\n    \"data\": {\n      \"success\": true,\n      \"notes\": [\n        {\n          \"anid\": 1,\n          \"uid\": 63,\n          \"rid\": 1,\n          \"date\": \"2025-04-16T20:11:55\",\n          \"note\": \"From Santa Claus after virtual Meet the North Pole event:  Both Blitzen and Cupid seemed to be good candidates for The Toy Shop.  Mrs. Claus agrees.\",\n          \"userFname\": \"Kayla\",\n          \"userLname\": \"Giles-Hodge\"\n        },\n        {\n          \"anid\": 2,\n          \"uid\": 64,\n          \"rid\": 1,\n          \"date\": \"2025-08-05T18:31:32\",\n          \"note\": \"Attended Wet Bandits Cocktail Reception\",\n          \"userFname\": \"Kevin\",\n          \"userLname\": \"McCallister\"\n        },\n        {\n          \"anid\": 3,\n          \"uid\": 65,\n          \"rid\": 1,\n          \"date\": \"2025-05-14T19:04:45\",\n          \"note\": \"Attended Hallmark's Meet the Class of 2028 reception\",\n          \"userFname\": \"Frosty\",\n          \"userLname\": \"Snowman\"\n        }\n      ]\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/summarizer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"summarizer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recruit Summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recruitSummary/:recruitId?context=admin_notes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recruitSummary",
+						":recruitId"
+					],
+					"query": [
+						{
+							"key": "context",
+							"value": "admin_notes"
+						}
+					],
+					"variable": [
+						{
+							"key": "recruitId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

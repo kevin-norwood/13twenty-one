@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1766072622065,
+      "tag": "0001_create_recruit_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1766073148549,
+      "tag": "0002_create_recruit_summary_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1766074699762,
+      "tag": "0003_remove_recruit_reference_from_recruit_summary",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1766074762612,
+      "tag": "0004_drop_recruit_table",
+      "breakpoints": true
+    }
+  ]
+}
